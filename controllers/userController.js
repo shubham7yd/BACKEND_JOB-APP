@@ -50,8 +50,8 @@ export const logout = catchAsyncErrors(async (req, res, next) => {
       httpOnly: true,
       expires: new Date(Date.now()),
       // this is for logout features in browser
-      // secure: true,
-      // SameSite: "None",
+      secure: true,
+      SameSite: "None",
     })
     .json({
       success: true,

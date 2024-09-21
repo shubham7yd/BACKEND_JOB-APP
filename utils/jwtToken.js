@@ -6,8 +6,8 @@ export const sendToken = (user, statusCode, res, message) => {
       ),
       httpOnly: true, // Set httpOnly to true
      // this is for logout features in browser
-      // secure: true,
-      // SameSite: "None",
+      secure: true,
+      SameSite: "None",
     };
   
     res.status(statusCode).cookie("token", token, options).json({
